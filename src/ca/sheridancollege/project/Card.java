@@ -4,7 +4,7 @@
  * Add your name as an author and the date!
  */
 package ca.sheridancollege.project;
-
+/**123
 /**
  * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
  * game. Students wishing to add to the code should remember to add themselves as a modifier.
