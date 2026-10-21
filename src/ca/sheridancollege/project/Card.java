@@ -31,5 +31,6 @@ public abstract class Card {
         this.age = age;
     }
     /**new2
-
+     * yes
+     */
 }
