@@ -1,58 +1,46 @@
-/**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
- */
-package ca.sheridancollege.project;
-
-import java.util.ArrayList;
+package exercise1;
 
 /**
- * The class that models your game. You should create a more specific child of this class and instantiate the methods
- * given.
- *
+ * A class that models playing card Objects. Cards have 
+ * a value (note that Ace = 1, Jack = 11, Queen = 12, King = 13)
+ * A suit (clubs, hearts, spades, diamonds).
+ * There are 52 cards in a deck, no jokers.
+ * This code is to be used in ICE1. When you create your own branch,
+ * add your name as a modifier.
  * @author dancye
- * @author Paul Bonenfant Jan 2020
+ * @author Paul Bonenfant May 2020
  */
-public abstract class Game {
+public class Card {
 
-    private final String name;//the title of the game
-    private ArrayList<Player> players;// the players of the game
+   private String suit; //clubs, spades, diamonds, hearts
+   private int value;//1-13
 
-    public Game(String name) {
-        this.name = name;
-        players = new ArrayList();
+   public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+    /**
+     * @return the suit
+     */
+    public String getSuit() {
+        return suit;
     }
 
     /**
-     * @return the name
+     * @param suit the suit to set
      */
-    public String getName() {
-        return name;
+    public void setSuit(String suit) {
+        this.suit = suit;
     }
 
     /**
-     * @return the players of this game
+     * @return the value
      */
-    public ArrayList<Player> getPlayers() {
-        return players;
+    public int getValue() {
+        return value;
     }
 
     /**
-     * @param players the players of this game
+     * @param value the value to set
      */
-    public void setPlayers(ArrayList<Player> players) {
-        this.players = players;
-    }
-
-    /**
-     * Play the game. This might be one method or many method calls depending on your game.
-     */
-    public abstract void play();
-
-    /**
-     * When the game is over, use this method to declare and display a winning player.
-     */
-    public abstract void declareWinner();
-
-}//end class
+    public void setValue(int value) {
+        this.value = value;
+    }  
+}
